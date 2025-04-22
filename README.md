@@ -4,6 +4,10 @@
 
 This application combines Zero-reference Deep Curve Estimation (Zero-DCE) with a Super Resolution CNN to enhance low-light and low-resolution images and videos.
 
+![Demo GIF](assets/demo.gif)
+
+*Demo showing the enhancement process in action*
+
 ## Features
 
 - Enhance low-light images and videos using Zero-DCE network
@@ -37,10 +41,16 @@ See `requirements.txt` for specific version requirements.
 
 ## Usage
 
-Run the application:
+Run the testing application:
 
 ```
-python main.py
+python test.py
+```
+
+For training the models:
+
+```
+python train.py
 ```
 
 ### Processing Images
@@ -71,10 +81,13 @@ The processing pipeline:
 
 ## File Structure
 
-- `main.py`: Main application script with GUI and processing logic
+- `test.py`: Script for testing the model and running the GUI application
+- `train.py`: Script for training the Zero-DCE and SR-CNN models
 - `models.py`: Contains neural network model definitions
 - `z_dce_network_ZESR.pth`: Pre-trained Zero-DCE model weights
 - `sr_cnn_ZESR.pth`: Pre-trained Super Resolution CNN model weights
+- `assets/`: Directory containing demonstration files
+  - `demo.gif`: Animated demonstration of the application in use
 
 ## Controls
 
@@ -83,8 +96,8 @@ The processing pipeline:
 
 ## License
 
-[Your license information]
+GNU General Public License v3.0
 
-## Credits
+## Datasets
 
-[Your credits/acknowledgements]
+- [Vimeo-90K Dataset](http://toflow.csail.mit.edu/) - Used for training and evaluation of video enhancement models
